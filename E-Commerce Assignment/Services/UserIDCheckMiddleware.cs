@@ -25,7 +25,7 @@ namespace E_Commerce_Assignment.Services
             {
                 filterContext.Result = new RedirectResult("~/Home/Login?redirected='access denied'");
             }
-            if(userRole=="2" && filterContext.ActionDescriptor.ActionName.Equals("admin"))
+            if(userRole=="2" && filterContext.ActionDescriptor.ActionName.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
                 filterContext.Result = new RedirectResult("~/Home/Login?redirected='access denied'");
             }
