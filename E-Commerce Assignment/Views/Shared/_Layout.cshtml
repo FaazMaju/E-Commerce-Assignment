@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+<link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <sidebar>
+
+        <div class="top">
+            <h3 class="text-light">Admin Panel</h3>
+
+            <ul>
+                <li>@Html.ActionLink("Dashboard", "Admin", "Home")</li>
+                <li>@Html.ActionLink("Products", "Index", "products")</li>
+                <li>@Html.ActionLink("Roles", "Index", "roles")</li>
+                <li>@Html.ActionLink("User", "Index", "users")</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li>@Html.ActionLink("Go To Website", "Index", "Home")</li>
+              
+                <li >@Html.ActionLink("Logout", "Logout", "Home",new {@class="bg-danger"})</li>
+            </ul>
+        </div>
+
+    </sidebar>
+    <div class="container body-content">
+        <nav class="">
+            <h1>Admin Panel</h1>
+        </nav>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Faaz Laeeq</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

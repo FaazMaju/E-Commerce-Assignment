@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title | Shop</title>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding:10px;
+        }
+
+        .header {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        .section {
+            background-color: black;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header d-flex justify-content-between align-items-center">
+        <h1>Shop</h1>
+        @Html.ActionLink("Logout", "Logout", "Home", htmlAttributes:new { @class= "bg-danger btn h-50" })
+    </div>
+    <br />
+    <div class="section">
+        @RenderBody()
+    </div>
+    <br />
+
+    <div class="footer">
+        <p>Created with ♥ by Faaz Laeeq</p>
+    </div>
+</body>
+</html>
